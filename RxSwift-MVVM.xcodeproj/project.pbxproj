@@ -13,7 +13,8 @@
 		EA5D496C1F75005500ABEA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49631F75004500ABEA59 /* LaunchScreen.storyboard */; };
 		EA5D496D1F75005500ABEA59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49651F75004500ABEA59 /* Main.storyboard */; };
 		EA5D496E1F75005800ABEA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49621F75004500ABEA59 /* Assets.xcassets */; };
-		EA5D496F1F75005B00ABEA59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D49601F75004500ABEA59 /* ViewController.swift */; };
+		EAA5C9B31F75017300575773 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5C9B21F75017300575773 /* LoginViewModel.swift */; };
+		EAA5C9B51F75017C00575773 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5C9B41F75017C00575773 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +22,13 @@
 		497907D4360CE27FDB84383A /* Pods-RxSwift-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-MVVM/Pods-RxSwift-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		8592D4ED7AF7DDB2DA05BDE8 /* Pods-RxSwift-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-MVVM/Pods-RxSwift-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		EA2B80FA1F750012004BCD3E /* RxSwift-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA5D49601F75004500ABEA59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA5D49621F75004500ABEA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5D49641F75004500ABEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA5D49661F75004500ABEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA5D49681F75004500ABEA59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5D49691F75004500ABEA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA5C9B21F75017300575773 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EAA5C9B41F75017C00575773 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		EA5D495E1F75004500ABEA59 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAA5C9B11F75016700575773 /* ViewModel */,
 				EA5D495F1F75004500ABEA59 /* ViewController */,
 			);
 			path = Classes;
@@ -97,7 +100,7 @@
 		EA5D495F1F75004500ABEA59 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA5D49601F75004500ABEA59 /* ViewController.swift */,
+				EAA5C9B41F75017C00575773 /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -119,6 +122,14 @@
 				EA5D49691F75004500ABEA59 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAA5C9B11F75016700575773 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAA5C9B21F75017300575773 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA5D496F1F75005B00ABEA59 /* ViewController.swift in Sources */,
+				EAA5C9B51F75017C00575773 /* LoginViewController.swift in Sources */,
 				EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */,
+				EAA5C9B31F75017300575773 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
