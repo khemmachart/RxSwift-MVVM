@@ -4,6 +4,7 @@ use_frameworks!
 target ‘RxSwift-MVVM’ do
     pod 'RxCocoa’
     pod 'RxSwift'
+    pod 'RxDataSources'
 end
 
 post_install do |installer|
