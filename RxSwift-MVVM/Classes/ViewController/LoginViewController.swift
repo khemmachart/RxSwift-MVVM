@@ -62,7 +62,23 @@ class LoginViewController: UIViewController {
 
     @IBAction private func loginButtonDidPress(_ sender: UIButton) {
         let alert = UIAlertController(title: nil, message: "Login success", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(loginAlertButtonAction)
         present(alert, animated: true, completion: nil)
+    }
+
+    // MARK: - Utils
+
+    private var loginAlertButtonAction: UIAlertAction {
+        return UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.presentDataSourceViewController()
+        })
+    }
+
+    private func presentDataSourceViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "DataSourceViewController") as? DataSourceViewController {
+            viewController.modalTransitionStyle = .crossDissolve
+            present(viewController, animated: true, completion: nil)
+        }
     }
 }
