@@ -15,18 +15,70 @@ class DataSourceViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
 
+    var dataSource = RxTableViewSectionedReloadDataSource<Subject>()
     let disposeBag = DisposeBag()
     let viewModel = DataSourceViewModel()
+    
+    func requestNewsFeedServiceDidSuccess() -> (([Subject]) -> Void)? {
+        return { (subjects) in
+            if self.tableView.dataSource != nil {
+                // Reload the table view if data source is exist
+                self.dataSource.setSections(subjects)
+                self.tableView.reloadSections([0], with: .fade)
+            } else {
+                // Binding the response to the table view
+                Observable.just(subjects)
+                    .asObservable()
+                    .bind(to: self.tableView.rx.items(dataSource: self.dataSource))
+                    .disposed(by: self.disposeBag)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel
-            .data
+        
+        // Request a service
+        viewModel.requestGetNewsFeedService()
             .asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: "Cell"), curriedArgument: { index, model, cell in
-                cell.textLabel?.text = model
-            })
+            .subscribe(onNext: requestNewsFeedServiceDidSuccess())
+            .disposed(by: disposeBag)
+        
+        // Configure cells and section title
+        dataSource.configureCell = { (dataSource, tabelView, indexPath, student) in
+            let cell = tabelView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            cell.textLabel?.text = "Student: \(student.name), ID: \(student.studentID)"
+            return cell
+        }
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].subjectName
+        }
+    }
+
+    @IBAction func addButtonDidPress(_ sender: AnyObject) {
+        viewModel.requestGetNewsFeedService()
+            .asObservable()
+            .subscribe(onNext: requestNewsFeedServiceDidSuccess())
+            .disposed(by: disposeBag)
+    }
+
+    @IBAction func deleteButtonDidPress(_ sender: AnyObject) {
+        viewModel.requestDeleteNewsFeedService(at: 0)
+            .asObservable()
+            .subscribe(onNext: { result in
+                if result {
+                    var sections = self.dataSource.sectionModels
+                    guard sections.count > 0  else { return }
+                    let filteredItems = sections[0].items.enumerated().filter({ $0.offset != 0 }).map({ $0.element })
+                    let mutatedSection = Subject(original: sections[0], items: filteredItems)
+                    sections[0] = mutatedSection
+                    
+                    self.dataSource.setSections(sections)
+                    self.tableView.reloadSections([0], with: .fade)
+                } else {
+                    print("Failed")
+                }
+            }, onError: nil, onCompleted: nil, onDisposed: nil)
             .disposed(by: disposeBag)
     }
 }

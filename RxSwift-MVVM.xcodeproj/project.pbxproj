@@ -10,6 +10,22 @@
 		52E5C1EA83E05ABF691F4BDB /* Pods_RxSwift_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FC05403DBC28A962C71828 /* Pods_RxSwift_MVVM.framework */; };
 		EA02D2C51F7921DD00558767 /* DataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02D2C41F7921DD00558767 /* DataSourceViewController.swift */; };
 		EA02D2C71F7924F100558767 /* DataSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */; };
+		EA0858791F7A655700D8D6C3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0858781F7A655700D8D6C3 /* Student.swift */; };
+		EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */; };
+		EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */; };
+		EA3C7B7E1F7D0ABB00259CE7 /* FCRouterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B741F7D0A9A00259CE7 /* FCRouterHeader.swift */; };
+		EA3C7B7F1F7D0ABB00259CE7 /* FCRouterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B751F7D0A9A00259CE7 /* FCRouterHelper.swift */; };
+		EA3C7B801F7D0ABB00259CE7 /* FCRouterMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B761F7D0A9A00259CE7 /* FCRouterMethod.swift */; };
+		EA3C7B811F7D0ABB00259CE7 /* FCRouterParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B771F7D0A9A00259CE7 /* FCRouterParameters.swift */; };
+		EA3C7B821F7D0ABB00259CE7 /* FCRouterPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B781F7D0A9A00259CE7 /* FCRouterPath.swift */; };
+		EA3C7B831F7D0ABB00259CE7 /* FCRouterRawBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B791F7D0A9A00259CE7 /* FCRouterRawBody.swift */; };
+		EA3C7B841F7D0ABB00259CE7 /* FCRouterResponseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B7A1F7D0A9A00259CE7 /* FCRouterResponseClass.swift */; };
+		EA3C7B851F7D0ABB00259CE7 /* FCRouterURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B7B1F7D0A9A00259CE7 /* FCRouterURLRequest.swift */; };
+		EA3C7B8A1F7D0B0600259CE7 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */; };
+		EA3C7B8B1F7D0B0600259CE7 /* APIRequestDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B881F7D0AF300259CE7 /* APIRequestDebugger.swift */; };
+		EA3C7B8C1F7D0B0600259CE7 /* APIRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B891F7D0AF300259CE7 /* APIRequestHelper.swift */; };
+		EA3C7B8E1F7D0CCE00259CE7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B8D1F7D0CCE00259CE7 /* BaseResponse.swift */; };
+		EA3C7B901F7D0DFB00259CE7 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B8F1F7D0DFB00259CE7 /* Subject.swift */; };
 		EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D49681F75004500ABEA59 /* AppDelegate.swift */; };
 		EA5D496B1F75005100ABEA59 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49691F75004500ABEA59 /* Info.plist */; };
 		EA5D496C1F75005500ABEA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49631F75004500ABEA59 /* LaunchScreen.storyboard */; };
@@ -25,7 +41,23 @@
 		8592D4ED7AF7DDB2DA05BDE8 /* Pods-RxSwift-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-MVVM/Pods-RxSwift-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		EA02D2C41F7921DD00558767 /* DataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceViewController.swift; sourceTree = "<group>"; };
 		EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceViewModel.swift; sourceTree = "<group>"; };
+		EA0858781F7A655700D8D6C3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EA2B80FA1F750012004BCD3E /* RxSwift-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouter.swift; sourceTree = "<group>"; };
+		EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterBaseURLString.swift; sourceTree = "<group>"; };
+		EA3C7B741F7D0A9A00259CE7 /* FCRouterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterHeader.swift; sourceTree = "<group>"; };
+		EA3C7B751F7D0A9A00259CE7 /* FCRouterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterHelper.swift; sourceTree = "<group>"; };
+		EA3C7B761F7D0A9A00259CE7 /* FCRouterMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterMethod.swift; sourceTree = "<group>"; };
+		EA3C7B771F7D0A9A00259CE7 /* FCRouterParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterParameters.swift; sourceTree = "<group>"; };
+		EA3C7B781F7D0A9A00259CE7 /* FCRouterPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterPath.swift; sourceTree = "<group>"; };
+		EA3C7B791F7D0A9A00259CE7 /* FCRouterRawBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterRawBody.swift; sourceTree = "<group>"; };
+		EA3C7B7A1F7D0A9A00259CE7 /* FCRouterResponseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterResponseClass.swift; sourceTree = "<group>"; };
+		EA3C7B7B1F7D0A9A00259CE7 /* FCRouterURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterURLRequest.swift; sourceTree = "<group>"; };
+		EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		EA3C7B881F7D0AF300259CE7 /* APIRequestDebugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestDebugger.swift; sourceTree = "<group>"; };
+		EA3C7B891F7D0AF300259CE7 /* APIRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHelper.swift; sourceTree = "<group>"; };
+		EA3C7B8D1F7D0CCE00259CE7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		EA3C7B8F1F7D0DFB00259CE7 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		EA5D49621F75004500ABEA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5D49641F75004500ABEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA5D49661F75004500ABEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +96,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA0858771F7A654F00D8D6C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA0858781F7A655700D8D6C3 /* Student.swift */,
+				EA3C7B8F1F7D0DFB00259CE7 /* Subject.swift */,
+				EA3C7B8D1F7D0CCE00259CE7 /* BaseResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EA2B80F11F750012004BCD3E = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +134,39 @@
 			path = "RxSwift-MVVM";
 			sourceTree = "<group>";
 		};
+		EA3C7B711F7D0A9A00259CE7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */,
+				EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */,
+				EA3C7B741F7D0A9A00259CE7 /* FCRouterHeader.swift */,
+				EA3C7B751F7D0A9A00259CE7 /* FCRouterHelper.swift */,
+				EA3C7B761F7D0A9A00259CE7 /* FCRouterMethod.swift */,
+				EA3C7B771F7D0A9A00259CE7 /* FCRouterParameters.swift */,
+				EA3C7B781F7D0A9A00259CE7 /* FCRouterPath.swift */,
+				EA3C7B791F7D0A9A00259CE7 /* FCRouterRawBody.swift */,
+				EA3C7B7A1F7D0A9A00259CE7 /* FCRouterResponseClass.swift */,
+				EA3C7B7B1F7D0A9A00259CE7 /* FCRouterURLRequest.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EA3C7B861F7D0AF300259CE7 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */,
+				EA3C7B881F7D0AF300259CE7 /* APIRequestDebugger.swift */,
+				EA3C7B891F7D0AF300259CE7 /* APIRequestHelper.swift */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
 		EA5D495E1F75004500ABEA59 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA3C7B861F7D0AF300259CE7 /* APIRequest */,
+				EA3C7B711F7D0A9A00259CE7 /* Router */,
+				EA0858771F7A654F00D8D6C3 /* Model */,
 				EAA5C9B11F75016700575773 /* ViewModel */,
 				EA5D495F1F75004500ABEA59 /* ViewController */,
 			);
@@ -262,10 +334,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3C7B841F7D0ABB00259CE7 /* FCRouterResponseClass.swift in Sources */,
 				EAA5C9B51F75017C00575773 /* LoginViewController.swift in Sources */,
+				EA0858791F7A655700D8D6C3 /* Student.swift in Sources */,
 				EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */,
 				EA02D2C71F7924F100558767 /* DataSourceViewModel.swift in Sources */,
 				EAA5C9B31F75017300575773 /* LoginViewModel.swift in Sources */,
+				EA3C7B821F7D0ABB00259CE7 /* FCRouterPath.swift in Sources */,
+				EA3C7B811F7D0ABB00259CE7 /* FCRouterParameters.swift in Sources */,
+				EA3C7B8C1F7D0B0600259CE7 /* APIRequestHelper.swift in Sources */,
+				EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */,
+				EA3C7B8B1F7D0B0600259CE7 /* APIRequestDebugger.swift in Sources */,
+				EA3C7B851F7D0ABB00259CE7 /* FCRouterURLRequest.swift in Sources */,
+				EA3C7B7E1F7D0ABB00259CE7 /* FCRouterHeader.swift in Sources */,
+				EA3C7B7F1F7D0ABB00259CE7 /* FCRouterHelper.swift in Sources */,
+				EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */,
+				EA3C7B8E1F7D0CCE00259CE7 /* BaseResponse.swift in Sources */,
+				EA3C7B901F7D0DFB00259CE7 /* Subject.swift in Sources */,
+				EA3C7B801F7D0ABB00259CE7 /* FCRouterMethod.swift in Sources */,
+				EA3C7B8A1F7D0B0600259CE7 /* APIRequest.swift in Sources */,
+				EA3C7B831F7D0ABB00259CE7 /* FCRouterRawBody.swift in Sources */,
 				EA02D2C51F7921DD00558767 /* DataSourceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

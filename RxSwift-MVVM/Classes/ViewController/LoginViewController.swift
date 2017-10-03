@@ -76,9 +76,8 @@ class LoginViewController: UIViewController {
 
     private func presentDataSourceViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "DataSourceViewController") as? DataSourceViewController {
-            viewController.modalTransitionStyle = .crossDissolve
-            present(viewController, animated: true, completion: nil)
-        }
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DataSourceViewController")
+        viewController.modalTransitionStyle = .crossDissolve
+        present(viewController, animated: true, completion: nil)
     }
 }
