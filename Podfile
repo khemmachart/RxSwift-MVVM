@@ -5,6 +5,7 @@ target ‘RxSwift-MVVM’ do
     pod 'RxCocoa’
     pod 'RxSwift'
     pod 'RxDataSources'
+    pod 'Alamofire'
 end
 
 post_install do |installer|
