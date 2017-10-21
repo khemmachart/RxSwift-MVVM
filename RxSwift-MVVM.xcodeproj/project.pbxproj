@@ -12,8 +12,6 @@
 		EA02D2C71F7924F100558767 /* DataSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */; };
 		EA0858791F7A655700D8D6C3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0858781F7A655700D8D6C3 /* Student.swift */; };
 		EA316B211F8E0AAC0075276B /* InstagramMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B201F8E0AAC0075276B /* InstagramMediaItem.swift */; };
-		EA316B231F8E11800075276B /* InstangramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B221F8E11800075276B /* InstangramViewModel.swift */; };
-		EA316B251F8E17980075276B /* InstagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B241F8E17980075276B /* InstagramViewController.swift */; };
 		EA316B271F8E38280075276B /* InstagramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B261F8E38280075276B /* InstagramTableViewCell.swift */; };
 		EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */; };
 		EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */; };
@@ -53,8 +51,6 @@
 		EA0858781F7A655700D8D6C3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EA2B80FA1F750012004BCD3E /* RxSwift-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA316B201F8E0AAC0075276B /* InstagramMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramMediaItem.swift; sourceTree = "<group>"; };
-		EA316B221F8E11800075276B /* InstangramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstangramViewModel.swift; sourceTree = "<group>"; };
-		EA316B241F8E17980075276B /* InstagramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramViewController.swift; sourceTree = "<group>"; };
 		EA316B261F8E38280075276B /* InstagramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTableViewCell.swift; sourceTree = "<group>"; };
 		EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouter.swift; sourceTree = "<group>"; };
 		EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterBaseURLString.swift; sourceTree = "<group>"; };
@@ -199,7 +195,6 @@
 			children = (
 				EAA5C9B41F75017C00575773 /* LoginViewController.swift */,
 				EA02D2C41F7921DD00558767 /* DataSourceViewController.swift */,
-				EA316B241F8E17980075276B /* InstagramViewController.swift */,
 				EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */,
 			);
 			path = ViewController;
@@ -230,7 +225,6 @@
 			children = (
 				EAA5C9B21F75017300575773 /* LoginViewModel.swift */,
 				EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */,
-				EA316B221F8E11800075276B /* InstangramViewModel.swift */,
 				EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */,
 			);
 			path = ViewModel;
@@ -375,7 +369,6 @@
 				EA0858791F7A655700D8D6C3 /* Student.swift in Sources */,
 				EAD58F8F1F9B12C9007DE539 /* NewsFeedViewModel.swift in Sources */,
 				EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */,
-				EA316B251F8E17980075276B /* InstagramViewController.swift in Sources */,
 				EA02D2C71F7924F100558767 /* DataSourceViewModel.swift in Sources */,
 				EAA5C9B31F75017300575773 /* LoginViewModel.swift in Sources */,
 				EA3C7B821F7D0ABB00259CE7 /* FCRouterPath.swift in Sources */,
@@ -384,7 +377,6 @@
 				EA3C7B8C1F7D0B0600259CE7 /* APIRequestProtocolHelper.swift in Sources */,
 				EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */,
 				EA3C7B8B1F7D0B0600259CE7 /* DataRequest+LogRequest.swift in Sources */,
-				EA316B231F8E11800075276B /* InstangramViewModel.swift in Sources */,
 				EAD4A17E1F838D3B002832A4 /* SampleTableViewCell.swift in Sources */,
 				EA3C7B851F7D0ABB00259CE7 /* FCRouterURLRequest.swift in Sources */,
 				EA316B271F8E38280075276B /* InstagramTableViewCell.swift in Sources */,

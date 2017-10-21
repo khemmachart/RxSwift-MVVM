@@ -8,26 +8,36 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class NewsFeedViewModel {
 
     var request: APIRequestProtocol
+
+    // MARK: - Initialization
 
     init(APIRequest request: APIRequest) {
         self.request = request
     }
 
     // MARK: - APIs
-
-    func requestNewsFeedService() {
-        _ = request.request(service: .newsFeed(userID: "khun9eiei"), handler: handleNewsFeedService())
+    
+    func requestGetNewsFeedService() -> Observable<[InstagramMediaSection]> {
+        return Observable.create { (observer: AnyObserver<[InstagramMediaSection]>) -> Disposable in
+            let request = self.request.request(
+                service: .newsFeed(userID: "khun9eiei"),
+                handler: self.handleGetNewsFeedService(observer: observer))
+            return Disposables.create(with: {
+                request?.cancel()
+            })
+        }
     }
-
-    // MARK: - Handler
-
-    private func handleNewsFeedService() -> APIRequestProtocol.CompletionHandler {
+    
+    private func handleGetNewsFeedService(observer: AnyObserver<[InstagramMediaSection]>) -> APIRequestProtocol.CompletionHandler {
         return { (response, error) in
-            
+            if let response = response as? InstagramMediaResponse {
+                observer.onNext(response.section)
+            }
         }
     }
 }
