@@ -6,7 +6,9 @@ target ‘RxSwift-MVVM’ do
     pod 'RxSwift'
     pod 'RxDataSources'
     pod 'Alamofire'
+    pod 'SDWebImage'
 end
+
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
