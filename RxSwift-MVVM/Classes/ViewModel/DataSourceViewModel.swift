@@ -18,7 +18,7 @@ class DataSourceViewModel {
     func requestGetNewsFeedService() -> Observable<[Subject]> {
         return Observable.create { (observer: AnyObserver<[Subject]>) -> Disposable in
             let request = self.request.request(
-                router: .newsFeed(userID: "khun9eiei"),
+                service: .newsFeed(userID: "khun9eiei"),
                 handler: self.handleGetNewsFeedService(observer: observer))
             return Disposables.create(with: {
                 request?.cancel()
@@ -29,7 +29,7 @@ class DataSourceViewModel {
     func requestDeleteNewsFeedService(at index: Int) -> Observable<Bool> {
         return Observable.create { (observer: AnyObserver<Bool>) -> Disposable in
             let request = self.request.request(
-                router: .newsFeed(userID: "khun9eiei"),
+                service: .newsFeed(userID: "khun9eiei"),
                 handler: self.handleDeleteNewsFeedService(at: index, observer: observer))
             return Disposables.create(with: {
                 request?.cancel()

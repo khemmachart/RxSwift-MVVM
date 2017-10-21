@@ -20,7 +20,7 @@ class NewsFeedViewModel {
     // MARK: - APIs
 
     func requestNewsFeedService() {
-        _ = request.request(router: .newsFeed(userID: "khun9eiei"), handler: handleNewsFeedService())
+        _ = request.request(service: .newsFeed(userID: "khun9eiei"), handler: handleNewsFeedService())
     }
 
     // MARK: - Handler

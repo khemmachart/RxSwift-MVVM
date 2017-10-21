@@ -15,7 +15,7 @@ protocol APIRequestProtocol {
 
     typealias CompletionHandler = (_ Response: BaseResponse?, _ Error: BaseResponse?) -> Void
 
-    func request(router: FCRouter, handler: @escaping CompletionHandler) -> Request?
+    func request(service: FCRouter, handler: @escaping CompletionHandler) -> Request?
     func successHandler(_ data: Any, router: FCRouter, completionHandler: APIRequestProtocol.CompletionHandler)
     func failureHandler(_ error: Any, completionHandler: APIRequestProtocol.CompletionHandler)
 }
