@@ -16,7 +16,7 @@ class NewsFeedViewModel {
 
     // MARK: - Initialization
 
-    init(APIRequest request: APIRequest) {
+    init(APIRequest request: APIRequestProtocol) {
         self.request = request
     }
 
