@@ -8,9 +8,9 @@
 
 import Alamofire
 
-extension APIRequest {
+extension APIRequestProtocol {
     
-    public static func generateErrorJSON(_ error: Error) -> [String: String] {
+    public func generateErrorJSON(_ error: Error) -> [String: String] {
         let statusCode = "\(error._code)"
         let generatedMessage = generateErrorMessage(error)
         let defaultMessage   = error.localizedDescription
@@ -20,7 +20,7 @@ extension APIRequest {
         ]
     }
     
-    public static func generateErrorMessage(_ error: Error) -> String {
+    public func generateErrorMessage(_ error: Error) -> String {
         
         if let error = error as? AFError {
             switch error {

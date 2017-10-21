@@ -9,19 +9,17 @@
 import Foundation
 import Alamofire
 
-class APIRequest: NSObject {
-    
-    typealias CompletionHandler = (_ Response: BaseResponse?, _ Error: BaseResponse?) -> Void
+final class APIRequest: APIRequestProtocol {
     
     // MARK: - API Request
     
-    static func request(router: FCRouter, handler: @escaping CompletionHandler) -> Request? {
+    func request(router: FCRouter, handler: @escaping CompletionHandler) -> Request? {
         
         return Alamofire.request(router)
             .logRequest()
             .responseJSON { response in
                 
-                APIRequest.logResponse(response)
+                self.logResponse(response)
                 
                 switch response.result {
                 case .success(let data):
@@ -34,7 +32,7 @@ class APIRequest: NSObject {
                         self.successHandler(json, router: router, completionHandler: handler)
                     }
                 case .failure(let error):
-                    let errorJSON = APIRequest.generateErrorJSON(error)
+                    let errorJSON = self.generateErrorJSON(error)
                     self.failureHandler(errorJSON, completionHandler: handler)
                 }
         }
@@ -42,12 +40,12 @@ class APIRequest: NSObject {
     
     // MARK: - Completion Handler
     
-    static func successHandler(_ data: Any, router: FCRouter, completionHandler: APIRequest.CompletionHandler) {
+    func successHandler(_ data: Any, router: FCRouter, completionHandler: APIRequest.CompletionHandler) {
         let instance = router.responseClass.init(object: data)
         completionHandler(instance, nil)
     }
     
-    static func failureHandler(_ error: Any, completionHandler: APIRequest.CompletionHandler) {
+    func failureHandler(_ error: Any, completionHandler: APIRequest.CompletionHandler) {
         let instance = BaseResponse(object: error)
         if validate(statusCode: instance.code) {
             completionHandler(nil, instance)
@@ -56,7 +54,7 @@ class APIRequest: NSObject {
     
     // MARK: - Validation
     
-    static func validate(statusCode code: String?) -> Bool {
+    func validate(statusCode code: String?) -> Bool {
         // To be override
         return true
     }

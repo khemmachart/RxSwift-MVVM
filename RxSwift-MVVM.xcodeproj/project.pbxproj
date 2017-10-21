@@ -26,8 +26,8 @@
 		EA3C7B841F7D0ABB00259CE7 /* FCRouterResponseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B7A1F7D0A9A00259CE7 /* FCRouterResponseClass.swift */; };
 		EA3C7B851F7D0ABB00259CE7 /* FCRouterURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B7B1F7D0A9A00259CE7 /* FCRouterURLRequest.swift */; };
 		EA3C7B8A1F7D0B0600259CE7 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */; };
-		EA3C7B8B1F7D0B0600259CE7 /* APIRequestDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B881F7D0AF300259CE7 /* APIRequestDebugger.swift */; };
-		EA3C7B8C1F7D0B0600259CE7 /* APIRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B891F7D0AF300259CE7 /* APIRequestHelper.swift */; };
+		EA3C7B8B1F7D0B0600259CE7 /* DataRequest+LogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B881F7D0AF300259CE7 /* DataRequest+LogRequest.swift */; };
+		EA3C7B8C1F7D0B0600259CE7 /* APIRequestProtocolHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B891F7D0AF300259CE7 /* APIRequestProtocolHelper.swift */; };
 		EA3C7B8E1F7D0CCE00259CE7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B8D1F7D0CCE00259CE7 /* BaseResponse.swift */; };
 		EA3C7B901F7D0DFB00259CE7 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B8F1F7D0DFB00259CE7 /* Subject.swift */; };
 		EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D49681F75004500ABEA59 /* AppDelegate.swift */; };
@@ -41,6 +41,7 @@
 		EAD58F8B1F9B1238007DE539 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */; };
 		EAD58F8D1F9B1294007DE539 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */; };
 		EAD58F8F1F9B12C9007DE539 /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */; };
+		EAD58F911F9B6DBC007DE539 /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F901F9B6DBC007DE539 /* APIRequestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +67,8 @@
 		EA3C7B7A1F7D0A9A00259CE7 /* FCRouterResponseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterResponseClass.swift; sourceTree = "<group>"; };
 		EA3C7B7B1F7D0A9A00259CE7 /* FCRouterURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterURLRequest.swift; sourceTree = "<group>"; };
 		EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		EA3C7B881F7D0AF300259CE7 /* APIRequestDebugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestDebugger.swift; sourceTree = "<group>"; };
-		EA3C7B891F7D0AF300259CE7 /* APIRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHelper.swift; sourceTree = "<group>"; };
+		EA3C7B881F7D0AF300259CE7 /* DataRequest+LogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+LogRequest.swift"; sourceTree = "<group>"; };
+		EA3C7B891F7D0AF300259CE7 /* APIRequestProtocolHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocolHelper.swift; sourceTree = "<group>"; };
 		EA3C7B8D1F7D0CCE00259CE7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		EA3C7B8F1F7D0DFB00259CE7 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		EA5D49621F75004500ABEA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
 		EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
+		EAD58F901F9B6DBC007DE539 /* APIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,9 +173,10 @@
 		EA3C7B861F7D0AF300259CE7 /* APIRequest */ = {
 			isa = PBXGroup;
 			children = (
+				EAD58F901F9B6DBC007DE539 /* APIRequestProtocol.swift */,
+				EA3C7B891F7D0AF300259CE7 /* APIRequestProtocolHelper.swift */,
+				EA3C7B881F7D0AF300259CE7 /* DataRequest+LogRequest.swift */,
 				EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */,
-				EA3C7B881F7D0AF300259CE7 /* APIRequestDebugger.swift */,
-				EA3C7B891F7D0AF300259CE7 /* APIRequestHelper.swift */,
 			);
 			path = APIRequest;
 			sourceTree = "<group>";
@@ -378,9 +381,9 @@
 				EA3C7B821F7D0ABB00259CE7 /* FCRouterPath.swift in Sources */,
 				EA3C7B811F7D0ABB00259CE7 /* FCRouterParameters.swift in Sources */,
 				EA316B211F8E0AAC0075276B /* InstagramMediaItem.swift in Sources */,
-				EA3C7B8C1F7D0B0600259CE7 /* APIRequestHelper.swift in Sources */,
+				EA3C7B8C1F7D0B0600259CE7 /* APIRequestProtocolHelper.swift in Sources */,
 				EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */,
-				EA3C7B8B1F7D0B0600259CE7 /* APIRequestDebugger.swift in Sources */,
+				EA3C7B8B1F7D0B0600259CE7 /* DataRequest+LogRequest.swift in Sources */,
 				EA316B231F8E11800075276B /* InstangramViewModel.swift in Sources */,
 				EAD4A17E1F838D3B002832A4 /* SampleTableViewCell.swift in Sources */,
 				EA3C7B851F7D0ABB00259CE7 /* FCRouterURLRequest.swift in Sources */,
@@ -390,6 +393,7 @@
 				EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */,
 				EAD58F8D1F9B1294007DE539 /* NewsFeedViewController.swift in Sources */,
 				EA3C7B8E1F7D0CCE00259CE7 /* BaseResponse.swift in Sources */,
+				EAD58F911F9B6DBC007DE539 /* APIRequestProtocol.swift in Sources */,
 				EA3C7B901F7D0DFB00259CE7 /* Subject.swift in Sources */,
 				EA3C7B801F7D0ABB00259CE7 /* FCRouterMethod.swift in Sources */,
 				EA3C7B8A1F7D0B0600259CE7 /* APIRequest.swift in Sources */,

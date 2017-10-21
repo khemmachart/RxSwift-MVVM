@@ -7,7 +7,27 @@
 //
 
 import Foundation
+import Alamofire
 
 class NewsFeedViewModel {
-    
+
+    var request: APIRequestProtocol
+
+    init(APIRequest request: APIRequest) {
+        self.request = request
+    }
+
+    // MARK: - APIs
+
+    func requestNewsFeedService() {
+        _ = request.request(router: .newsFeed(userID: "khun9eiei"), handler: handleNewsFeedService())
+    }
+
+    // MARK: - Handler
+
+    private func handleNewsFeedService() -> APIRequestProtocol.CompletionHandler {
+        return { (response, error) in
+            
+        }
+    }
 }

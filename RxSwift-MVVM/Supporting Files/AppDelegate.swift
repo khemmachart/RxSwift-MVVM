@@ -22,11 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
 
     func setInitialViewController(window: inout UIWindow?) {
+        if let initialViewController = getNewsFeedViewController() {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        }
+    }
+
+    private func getNewsFeedViewController() -> NewsFeedViewController? {
         let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "NewsFeedViewController")
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "NewsFeedViewController") as? NewsFeedViewController {
+            viewController.viewModel = NewsFeedViewModel(APIRequest: APIRequest())
+            return viewController
+        }
+        return nil
     }
 }
 

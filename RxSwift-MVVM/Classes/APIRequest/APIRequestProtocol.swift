@@ -1,43 +1,37 @@
 //
-//  APIRequestDebugger.swift
-//  CheckIn
+//  APIRequestProtocol.swift
+//  RxSwift-MVVM
 //
-//  Created by Khemmachart Chutapetch on 9/13/2560 BE.
+//  Created by Khemmachart Chutapetch on 10/21/2560 BE.
 //  Copyright © 2560 Khemmachart Chutapetch. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-// MARK: - Log Request
+// MARK: - Protocol
 
-extension DataRequest {
-    
-    public func logRequest() -> DataRequest {
-        if let request = self.request {
-            APIRequest.logDivider()
-            APIRequest.logPath(URL: request.url, withKey: "Request")
-            APIRequest.logHTTPMethod(request: request)
-            APIRequest.logHeaders(headers: request.allHTTPHeaderFields)
-            APIRequest.logJSON(data: request.httpBody)
-            APIRequest.logDivider()
-        }
-        return self
-    }
+protocol APIRequestProtocol {
+
+    typealias CompletionHandler = (_ Response: BaseResponse?, _ Error: BaseResponse?) -> Void
+
+    func request(router: FCRouter, handler: @escaping CompletionHandler) -> Request?
+    func successHandler(_ data: Any, router: FCRouter, completionHandler: APIRequestProtocol.CompletionHandler)
+    func failureHandler(_ error: Any, completionHandler: APIRequestProtocol.CompletionHandler)
 }
 
 // MARK: - Log Response
 
-extension APIRequest {
+extension APIRequestProtocol {
     
-    public static func logResponse(_ aResponse: DataResponse<Any>) {
+    public func logResponse(_ aResponse: DataResponse<Any>) {
         if let response = aResponse.response {
-            self.logDivider()
-            self.logPath(URL: response.url, withKey: "Response")
-            self.logStatus(httpResponse: response)
-            self.logHeaders(headers: response.allHeaderFields)
-            self.logJSON(data: aResponse.data)
-            self.logDivider()
+            logDivider()
+            logPath(URL: response.url, withKey: "Response")
+            logStatus(httpResponse: response)
+            logHeaders(headers: response.allHeaderFields)
+            logJSON(data: aResponse.data)
+            logDivider()
         }
         
         /*
@@ -47,25 +41,24 @@ extension APIRequest {
          }
          */
     }
-    
 }
 
 // MARK: - Utiles
 
-extension APIRequest {
+extension APIRequestProtocol {
     
-    public static func logPath(URL: URL?, withKey key: String) {
+    public func logPath(URL: URL?, withKey key: String) {
         if let URL = URL {
             print("\(key): \(URL.absoluteString)")
         }
     }
     
-    public static func logStatus(httpResponse: HTTPURLResponse) {
+    public func logStatus(httpResponse: HTTPURLResponse) {
         let localisedStatus = HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode).capitalized
         print("Status: \(httpResponse.statusCode) - \(localisedStatus)")
     }
     
-    public static func logHeaders(headers: Any?) {
+    public func logHeaders(headers: Any?) {
         if let headers = headers as? [String: AnyObject] {
             print("Headers: [")
             for (key, value) in headers {
@@ -75,7 +68,7 @@ extension APIRequest {
         }
     }
     
-    public static func logJSON(data: Data?) {
+    public func logJSON(data: Data?) {
         guard let data = data else { return }
         
         do {
@@ -93,13 +86,13 @@ extension APIRequest {
         }
     }
     
-    public static func logHTTPMethod(request: URLRequest) {
+    public func logHTTPMethod(request: URLRequest) {
         if let method = request.httpMethod {
             print("Method: \(method)")
         }
     }
     
-    public static func logDivider() {
+    public func logDivider() {
         print("-------------------------------------------------------------------------------------------------")
     }
 }

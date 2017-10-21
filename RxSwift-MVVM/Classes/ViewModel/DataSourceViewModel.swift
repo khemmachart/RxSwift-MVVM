@@ -11,11 +11,13 @@ import RxSwift
 
 class DataSourceViewModel {
 
+    var request: APIRequestProtocol = APIRequest()
+
     // MARK: - APIs
 
     func requestGetNewsFeedService() -> Observable<[Subject]> {
         return Observable.create { (observer: AnyObserver<[Subject]>) -> Disposable in
-            let request = APIRequest.request(
+            let request = self.request.request(
                 router: .newsFeed(userID: "khun9eiei"),
                 handler: self.handleGetNewsFeedService(observer: observer))
             return Disposables.create(with: {
@@ -26,7 +28,7 @@ class DataSourceViewModel {
 
     func requestDeleteNewsFeedService(at index: Int) -> Observable<Bool> {
         return Observable.create { (observer: AnyObserver<Bool>) -> Disposable in
-            let request = APIRequest.request(
+            let request = self.request.request(
                 router: .newsFeed(userID: "khun9eiei"),
                 handler: self.handleDeleteNewsFeedService(at: index, observer: observer))
             return Disposables.create(with: {
@@ -37,7 +39,7 @@ class DataSourceViewModel {
 
     // MARK: - Handlers
 
-    private func handleGetNewsFeedService(observer: AnyObserver<[Subject]>) -> APIRequest.CompletionHandler {
+    private func handleGetNewsFeedService(observer: AnyObserver<[Subject]>) -> APIRequestProtocol.CompletionHandler {
         return { (response, error) in
             if response != nil {
                 observer.onNext([
@@ -66,7 +68,7 @@ class DataSourceViewModel {
         }
     }
 
-    private func handleDeleteNewsFeedService(at index: Int, observer: AnyObserver<Bool>) -> APIRequest.CompletionHandler {
+    private func handleDeleteNewsFeedService(at index: Int, observer: AnyObserver<Bool>) -> APIRequestProtocol.CompletionHandler {
         return { (response, error) in
             if response != nil {
                 observer.onNext(true)
