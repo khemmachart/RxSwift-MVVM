@@ -8,21 +8,22 @@
 
 import Foundation
 import RxDataSources
+import RxSwift
 
 struct Student {
-    var studentID: String
-    var name: String
+    var studentID: Variable<String> = Variable("")
+    var name: Variable<String> = Variable("")
 
     init(sID: String, name: String) {
-        self.studentID = sID
-        self.name = name
+        self.studentID.value = sID
+        self.name.value = name
     }
 }
 
 extension Student: Equatable {
 
     static func == (lhs: Student, rhs: Student) -> Bool {
-        return lhs.studentID == rhs.studentID && lhs.name == rhs.name
+        return lhs.studentID.value == rhs.studentID.value && lhs.name.value == rhs.name.value
     }
 }
 
@@ -30,6 +31,6 @@ extension Student: IdentifiableType {
     typealias Identity = String
     
     var identity : Identity {
-        return studentID
+        return studentID.value
     }
 }

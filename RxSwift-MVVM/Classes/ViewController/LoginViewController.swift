@@ -38,16 +38,12 @@ class LoginViewController: UIViewController {
     // MARK: - Rx setup
 
     private func setupObservers() {
-        usernameTextField
-            .rx
-            .text
+        usernameTextField.rx.text
             .map({ $0 ?? "" })
             .bind(to: viewModel.usernameText)
             .addDisposableTo(disposeBag)
 
-        passwordTextField
-            .rx
-            .text
+        passwordTextField.rx.text
             .map({ $0 ?? "" })
             .bind(to: viewModel.passwordText)
             .addDisposableTo(disposeBag)

@@ -11,6 +11,10 @@
 		EA02D2C51F7921DD00558767 /* DataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02D2C41F7921DD00558767 /* DataSourceViewController.swift */; };
 		EA02D2C71F7924F100558767 /* DataSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */; };
 		EA0858791F7A655700D8D6C3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0858781F7A655700D8D6C3 /* Student.swift */; };
+		EA316B211F8E0AAC0075276B /* InstagramMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B201F8E0AAC0075276B /* InstagramMediaItem.swift */; };
+		EA316B231F8E11800075276B /* InstangramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B221F8E11800075276B /* InstangramViewModel.swift */; };
+		EA316B251F8E17980075276B /* InstagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B241F8E17980075276B /* InstagramViewController.swift */; };
+		EA316B271F8E38280075276B /* InstagramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA316B261F8E38280075276B /* InstagramTableViewCell.swift */; };
 		EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */; };
 		EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */; };
 		EA3C7B7E1F7D0ABB00259CE7 /* FCRouterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7B741F7D0A9A00259CE7 /* FCRouterHeader.swift */; };
@@ -33,6 +37,10 @@
 		EA5D496E1F75005800ABEA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49621F75004500ABEA59 /* Assets.xcassets */; };
 		EAA5C9B31F75017300575773 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5C9B21F75017300575773 /* LoginViewModel.swift */; };
 		EAA5C9B51F75017C00575773 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5C9B41F75017C00575773 /* LoginViewController.swift */; };
+		EAD4A17E1F838D3B002832A4 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4A17D1F838D3B002832A4 /* SampleTableViewCell.swift */; };
+		EAD58F8B1F9B1238007DE539 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */; };
+		EAD58F8D1F9B1294007DE539 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */; };
+		EAD58F8F1F9B12C9007DE539 /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +51,10 @@
 		EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceViewModel.swift; sourceTree = "<group>"; };
 		EA0858781F7A655700D8D6C3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EA2B80FA1F750012004BCD3E /* RxSwift-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA316B201F8E0AAC0075276B /* InstagramMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramMediaItem.swift; sourceTree = "<group>"; };
+		EA316B221F8E11800075276B /* InstangramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstangramViewModel.swift; sourceTree = "<group>"; };
+		EA316B241F8E17980075276B /* InstagramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramViewController.swift; sourceTree = "<group>"; };
+		EA316B261F8E38280075276B /* InstagramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTableViewCell.swift; sourceTree = "<group>"; };
 		EA3C7B721F7D0A9A00259CE7 /* FCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouter.swift; sourceTree = "<group>"; };
 		EA3C7B731F7D0A9A00259CE7 /* FCRouterBaseURLString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterBaseURLString.swift; sourceTree = "<group>"; };
 		EA3C7B741F7D0A9A00259CE7 /* FCRouterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterHeader.swift; sourceTree = "<group>"; };
@@ -65,6 +77,10 @@
 		EA5D49691F75004500ABEA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAA5C9B21F75017300575773 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EAA5C9B41F75017C00575773 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EAD4A17D1F838D3B002832A4 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
+		EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 				EA0858781F7A655700D8D6C3 /* Student.swift */,
 				EA3C7B8F1F7D0DFB00259CE7 /* Subject.swift */,
 				EA3C7B8D1F7D0CCE00259CE7 /* BaseResponse.swift */,
+				EA316B201F8E0AAC0075276B /* InstagramMediaItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +183,7 @@
 			children = (
 				EA3C7B861F7D0AF300259CE7 /* APIRequest */,
 				EA3C7B711F7D0A9A00259CE7 /* Router */,
+				EAD4A17C1F838D31002832A4 /* View */,
 				EA0858771F7A654F00D8D6C3 /* Model */,
 				EAA5C9B11F75016700575773 /* ViewModel */,
 				EA5D495F1F75004500ABEA59 /* ViewController */,
@@ -178,6 +196,8 @@
 			children = (
 				EAA5C9B41F75017C00575773 /* LoginViewController.swift */,
 				EA02D2C41F7921DD00558767 /* DataSourceViewController.swift */,
+				EA316B241F8E17980075276B /* InstagramViewController.swift */,
+				EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -188,6 +208,7 @@
 				EA5D49621F75004500ABEA59 /* Assets.xcassets */,
 				EA5D49631F75004500ABEA59 /* LaunchScreen.storyboard */,
 				EA5D49651F75004500ABEA59 /* Main.storyboard */,
+				EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -206,8 +227,19 @@
 			children = (
 				EAA5C9B21F75017300575773 /* LoginViewModel.swift */,
 				EA02D2C61F7924F100558767 /* DataSourceViewModel.swift */,
+				EA316B221F8E11800075276B /* InstangramViewModel.swift */,
+				EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAD4A17C1F838D31002832A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAD4A17D1F838D3B002832A4 /* SampleTableViewCell.swift */,
+				EA316B261F8E38280075276B /* InstagramTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5D496D1F75005500ABEA59 /* Main.storyboard in Resources */,
+				EAD58F8B1F9B1238007DE539 /* NewsFeed.storyboard in Resources */,
 				EA5D496B1F75005100ABEA59 /* Info.plist in Resources */,
 				EA5D496E1F75005800ABEA59 /* Assets.xcassets in Resources */,
 				EA5D496C1F75005500ABEA59 /* LaunchScreen.storyboard in Resources */,
@@ -337,18 +370,25 @@
 				EA3C7B841F7D0ABB00259CE7 /* FCRouterResponseClass.swift in Sources */,
 				EAA5C9B51F75017C00575773 /* LoginViewController.swift in Sources */,
 				EA0858791F7A655700D8D6C3 /* Student.swift in Sources */,
+				EAD58F8F1F9B12C9007DE539 /* NewsFeedViewModel.swift in Sources */,
 				EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */,
+				EA316B251F8E17980075276B /* InstagramViewController.swift in Sources */,
 				EA02D2C71F7924F100558767 /* DataSourceViewModel.swift in Sources */,
 				EAA5C9B31F75017300575773 /* LoginViewModel.swift in Sources */,
 				EA3C7B821F7D0ABB00259CE7 /* FCRouterPath.swift in Sources */,
 				EA3C7B811F7D0ABB00259CE7 /* FCRouterParameters.swift in Sources */,
+				EA316B211F8E0AAC0075276B /* InstagramMediaItem.swift in Sources */,
 				EA3C7B8C1F7D0B0600259CE7 /* APIRequestHelper.swift in Sources */,
 				EA3C7B7D1F7D0ABB00259CE7 /* FCRouterBaseURLString.swift in Sources */,
 				EA3C7B8B1F7D0B0600259CE7 /* APIRequestDebugger.swift in Sources */,
+				EA316B231F8E11800075276B /* InstangramViewModel.swift in Sources */,
+				EAD4A17E1F838D3B002832A4 /* SampleTableViewCell.swift in Sources */,
 				EA3C7B851F7D0ABB00259CE7 /* FCRouterURLRequest.swift in Sources */,
+				EA316B271F8E38280075276B /* InstagramTableViewCell.swift in Sources */,
 				EA3C7B7E1F7D0ABB00259CE7 /* FCRouterHeader.swift in Sources */,
 				EA3C7B7F1F7D0ABB00259CE7 /* FCRouterHelper.swift in Sources */,
 				EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */,
+				EAD58F8D1F9B1294007DE539 /* NewsFeedViewController.swift in Sources */,
 				EA3C7B8E1F7D0CCE00259CE7 /* BaseResponse.swift in Sources */,
 				EA3C7B901F7D0DFB00259CE7 /* Subject.swift in Sources */,
 				EA3C7B801F7D0ABB00259CE7 /* FCRouterMethod.swift in Sources */,

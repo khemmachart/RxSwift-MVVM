@@ -11,7 +11,7 @@ extension FCRouter {
     var responseClass: BaseResponse.Type {
         switch self {
         case .newsFeed:
-            return BaseResponse.self
+            return InstagramMediaResponse.self
         }
     }
 }

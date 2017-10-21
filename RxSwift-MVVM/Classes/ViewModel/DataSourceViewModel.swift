@@ -48,6 +48,8 @@ class DataSourceViewModel {
                             Student(sID: "55130500205", name: "Khemmachart"),
                             Student(sID: "55130500206", name: "Jirayu"),
                             Student(sID: "55130500207", name: "Chularak"),
+                            Student(sID: "55130500222", name: "Peerapon"),
+                            Student(sID: "55130500252", name: "Pahn"),
                             ]),
                     Subject(
                         subjectName: "Foundation",
@@ -56,8 +58,10 @@ class DataSourceViewModel {
                             Student(sID: "55130500223", name: "Puttapong"),
                             Student(sID: "55130500235", name: "Adisak"),
                             Student(sID: "55130500242", name: "Panas"),
+                            Student(sID: "55130500249", name: "Ritthikiat"),
+                            Student(sID: "55130500247", name: "Apikrit"),
                             ])
-                ])
+                ])  
             }
         }
     }

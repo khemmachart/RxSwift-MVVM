@@ -44,11 +44,18 @@ class DataSourceViewController: UIViewController {
             .subscribe(onNext: requestNewsFeedServiceDidSuccess())
             .disposed(by: disposeBag)
         
+        // Table view
+        tableView.rx
+            .setDelegate(self)
+            .addDisposableTo(disposeBag)
+        
         // Configure cells and section title
         dataSource.configureCell = { (dataSource, tabelView, indexPath, student) in
-            let cell = tabelView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = "Student: \(student.name), ID: \(student.studentID)"
-            return cell
+            if let cell = tabelView.dequeueReusableCell(withIdentifier: "SampleTableViewCell", for: indexPath) as? SampleTableViewCell {
+                cell.setContent(student)
+                return cell
+            }
+            return UITableViewCell()
         }
         dataSource.titleForHeaderInSection = { dataSource, index in
             return dataSource.sectionModels[index].subjectName
@@ -80,5 +87,12 @@ class DataSourceViewController: UIViewController {
                 }
             }, onError: nil, onCompleted: nil, onDisposed: nil)
             .disposed(by: disposeBag)
+    }
+}
+
+extension DataSourceViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 }
