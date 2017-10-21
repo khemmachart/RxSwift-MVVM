@@ -40,6 +40,7 @@
 		EAD58F8D1F9B1294007DE539 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */; };
 		EAD58F8F1F9B12C9007DE539 /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */; };
 		EAD58F911F9B6DBC007DE539 /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F901F9B6DBC007DE539 /* APIRequestProtocol.swift */; };
+		EAD58F931F9B770B007DE539 /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD58F921F9B770B007DE539 /* APIRequestMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		EAD58F8C1F9B1294007DE539 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		EAD58F8E1F9B12C9007DE539 /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 		EAD58F901F9B6DBC007DE539 /* APIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
+		EAD58F921F9B770B007DE539 /* APIRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				EA3C7B891F7D0AF300259CE7 /* APIRequestProtocolHelper.swift */,
 				EA3C7B881F7D0AF300259CE7 /* DataRequest+LogRequest.swift */,
 				EA3C7B871F7D0AF300259CE7 /* APIRequest.swift */,
+				EAD58F921F9B770B007DE539 /* APIRequestMock.swift */,
 			);
 			path = APIRequest;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				EA3C7B7F1F7D0ABB00259CE7 /* FCRouterHelper.swift in Sources */,
 				EA3C7B7C1F7D0ABB00259CE7 /* FCRouter.swift in Sources */,
 				EAD58F8D1F9B1294007DE539 /* NewsFeedViewController.swift in Sources */,
+				EAD58F931F9B770B007DE539 /* APIRequestMock.swift in Sources */,
 				EA3C7B8E1F7D0CCE00259CE7 /* BaseResponse.swift in Sources */,
 				EAD58F911F9B6DBC007DE539 /* APIRequestProtocol.swift in Sources */,
 				EA3C7B901F7D0DFB00259CE7 /* Subject.swift in Sources */,
