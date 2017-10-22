@@ -6,7 +6,6 @@
 //  Copyright © 2560 Khemmachart Chutapetch. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 import RxSwift
@@ -24,10 +23,12 @@ class NewsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Request news feeds
-        viewModel.requestGetNewsFeedService()
-            .asObservable()
-            .subscribe(onNext: requestNewsFeedServiceDidSuccess())
-            .disposed(by: disposeBag)
+        for userID in InstagramUserManager.shared.getAllUser() {
+            viewModel.requestGetNewsFeedService(userID: userID)
+                .asObservable()
+                .subscribe(onNext: requestNewsFeedServiceDidSuccess())
+                .disposed(by: disposeBag)
+        }
         
         // Table view delegate
         tableView.rx
@@ -47,9 +48,10 @@ class NewsFeedViewController: UIViewController {
     func requestNewsFeedServiceDidSuccess() -> (([InstagramMediaSection]) -> Void)? {
         return { (instagramSections) in
             if self.tableView.dataSource != nil {
-                // Reload the table view if data source is exist
-                self.dataSource.setSections(instagramSections)
-                self.tableView.reloadSections([0], with: .fade)
+                // Reload the table view just only the new section
+                let combindedSections = self.dataSource.sectionModels + instagramSections
+                self.dataSource.setSections(combindedSections)
+                self.tableView.reloadData()
             } else {
                 // Binding the response to the table view
                 Observable.just(instagramSections)

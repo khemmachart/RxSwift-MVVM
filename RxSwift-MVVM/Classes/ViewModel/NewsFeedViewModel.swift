@@ -22,10 +22,10 @@ class NewsFeedViewModel {
 
     // MARK: - APIs
     
-    func requestGetNewsFeedService() -> Observable<[InstagramMediaSection]> {
+    func requestGetNewsFeedService(userID: String) -> Observable<[InstagramMediaSection]> {
         return Observable.create { (observer: AnyObserver<[InstagramMediaSection]>) -> Disposable in
             let request = self.request.request(
-                service: .newsFeed(userID: "khun9eiei"),
+                service: .newsFeed(userID: userID),
                 handler: self.handleGetNewsFeedService(observer: observer))
             return Disposables.create(with: {
                 request?.cancel()
