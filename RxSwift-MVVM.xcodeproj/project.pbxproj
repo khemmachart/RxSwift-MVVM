@@ -41,6 +41,8 @@
 		EAC43C3F1F9D09F500A5D53B /* FCRouterRawBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43C1F1F9D078200A5D53B /* FCRouterRawBody.swift */; };
 		EAC43C401F9D09F500A5D53B /* FCRouterResponseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43C201F9D078200A5D53B /* FCRouterResponseClass.swift */; };
 		EAC43C411F9D09F500A5D53B /* FCRouterURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43C211F9D078200A5D53B /* FCRouterURLRequest.swift */; };
+		EAC43C451F9D0BB000A5D53B /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC43C441F9D0BB000A5D53B /* Setting.storyboard */; };
+		EAC43C471F9D0C3B00A5D53B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43C461F9D0C3B00A5D53B /* SettingViewController.swift */; };
 		EAD58F8B1F9B1238007DE539 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		EAC43C201F9D078200A5D53B /* FCRouterResponseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterResponseClass.swift; sourceTree = "<group>"; };
 		EAC43C211F9D078200A5D53B /* FCRouterURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCRouterURLRequest.swift; sourceTree = "<group>"; };
 		EAC43C221F9D079100A5D53B /* InstagramUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUserManager.swift; sourceTree = "<group>"; };
+		EAC43C441F9D0BB000A5D53B /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		EAC43C461F9D0C3B00A5D53B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,7 @@
 				EA5D49631F75004500ABEA59 /* LaunchScreen.storyboard */,
 				EA5D49651F75004500ABEA59 /* Main.storyboard */,
 				EAD58F8A1F9B1238007DE539 /* NewsFeed.storyboard */,
+				EAC43C441F9D0BB000A5D53B /* Setting.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				EAC43C081F9D078200A5D53B /* DataSourceViewController.swift */,
 				EAC43C091F9D078200A5D53B /* LoginViewController.swift */,
 				EAC43C0A1F9D078200A5D53B /* NewsFeedViewController.swift */,
+				EAC43C461F9D0C3B00A5D53B /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				EA5D496B1F75005100ABEA59 /* Info.plist in Resources */,
 				EA5D496E1F75005800ABEA59 /* Assets.xcassets in Resources */,
 				EA5D496C1F75005500ABEA59 /* LaunchScreen.storyboard in Resources */,
+				EAC43C451F9D0BB000A5D53B /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +398,7 @@
 				EAC43C2A1F9D09DC00A5D53B /* SampleTableViewCell.swift in Sources */,
 				EAC43C411F9D09F500A5D53B /* FCRouterURLRequest.swift in Sources */,
 				EAC43C2D1F9D09E100A5D53B /* DataSourceViewController.swift in Sources */,
+				EAC43C471F9D0C3B00A5D53B /* SettingViewController.swift in Sources */,
 				EAC43C321F9D09E700A5D53B /* NewsFeedViewModel.swift in Sources */,
 				EAC43C391F9D09F500A5D53B /* FCRouterBaseURLString.swift in Sources */,
 				EAC43C261F9D09D100A5D53B /* BaseResponse.swift in Sources */,
