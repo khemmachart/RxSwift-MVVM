@@ -18,6 +18,10 @@ protocol APIRequestProtocol {
     func request(service: FCRouter, handler: @escaping CompletionHandler) -> Request?
     func successHandler(_ data: Any, router: FCRouter, completionHandler: APIRequestProtocol.CompletionHandler)
     func failureHandler(_ error: Any, completionHandler: APIRequestProtocol.CompletionHandler)
+    
+//    func request(service: FCRouter, handler: @escaping CompletionHandler) -> Request?
+//    func genericSuccessHandler<A>(_ data: Any, router: FCRouter, type: A, completionHandler: APIRequestProtocol.GenericCompletionHandler)
+//    func genericFailureHandler<A>(_ error: Any, type: T, completionHandler: APIRequestProtocol.GenericCompletionHandler)
 }
 
 // MARK: - Log Response
