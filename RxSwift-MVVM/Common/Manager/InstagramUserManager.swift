@@ -14,7 +14,7 @@ class InstagramUserManager {
 
     let key: String = "InstagramSavedUsersKey"
     private var users: [String] = []
-
+    
     private init() {
         retrieve()
     }
@@ -43,8 +43,7 @@ class InstagramUserManager {
     }
 
     func retrieve() {
-        guard let usersData = UserDefaults.standard.object(forKey: key) as? NSData else { return }
-        guard let decodedUsers = NSKeyedUnarchiver.unarchiveObject(with: usersData as Data) as? [String] else { return }
-        users = decodedUsers
+        guard let users = UserDefaults.standard.object(forKey: key) as? [String] else { return }
+        self.users = users
     }
 }
