@@ -52,11 +52,21 @@ class NewsFeedViewController: UIViewController {
     
     func requestNewsFeedServiceDidSuccess() -> (([InstagramMediaSection]) -> Void)? {
         return { (instagramSections) in
-            if self.tableView.dataSource != nil {
-                // Reload the table view just only the new section
-                let combindedSections = self.dataSource.sectionModels + instagramSections
-                self.dataSource.setSections(combindedSections)
-                self.tableView.reloadData()
+
+            // If the data source is exist, we update it instead of create new onw
+            if self.tableView.dataSource != nil,
+                // Optional binding
+                let firstSection = self.dataSource.sectionModels.first,
+                let instagramSection = instagramSections.first {
+                
+                // Set the new items to section, it has to be created a new one
+                let combindedItems = firstSection.items + instagramSection.items
+                let newSecion = InstagramMediaSection(original: firstSection, items: combindedItems)
+
+                // Reload the table view
+                self.dataSource.setSections([newSecion])
+                self.tableView.reloadSections([0], with: .none)
+
             } else {
                 // Binding the response to the table view
                 Observable.just(instagramSections)
