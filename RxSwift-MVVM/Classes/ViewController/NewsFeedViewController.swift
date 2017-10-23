@@ -47,6 +47,8 @@ class NewsFeedViewController: UIViewController {
             return  UITableViewCell()
         }
     }
+
+    /// MARK: - Request handlers
     
     func requestNewsFeedServiceDidSuccess() -> (([InstagramMediaSection]) -> Void)? {
         return { (instagramSections) in
@@ -62,6 +64,23 @@ class NewsFeedViewController: UIViewController {
                     .bind(to: self.tableView.rx.items(dataSource: self.dataSource))
                     .disposed(by: self.disposeBag)
             }
+        }
+    }
+    
+    // MARK: - Action
+
+    @IBAction private func editButtonDidPress(_ sender: UIBarButtonItem) {
+        presentSettingView()
+    }
+
+    // MAKR: - Utils
+
+    private func presentSettingView() {
+        let sName = "Main"
+        let sID = "DataSourceViewController"
+        let stroyboard = UIStoryboard(name: sName, bundle: nil)
+        if let viewController = stroyboard.instantiateViewController(withIdentifier: sID) as? DataSourceViewController {
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }

@@ -90,7 +90,13 @@
                         <viewLayoutGuide key="safeArea" id="rpE-0l-2m5"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="jFB-2y-5KG"/>
+                    <navigationItem key="navigationItem" id="jFB-2y-5KG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="rFG-K1-PB4">
+                            <connections>
+                                <action selector="editButtonDidPress:" destination="v40-5c-etC" id="nO8-8J-b3m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Vbn-Oz-8hc" id="9p7-rf-n0y"/>
                     </connections>
