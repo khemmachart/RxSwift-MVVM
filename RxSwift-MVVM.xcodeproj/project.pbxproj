@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52E5C1EA83E05ABF691F4BDB /* Pods_RxSwift_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FC05403DBC28A962C71828 /* Pods_RxSwift_MVVM.framework */; };
+		EA25FF511F9DB8ED001A377F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25FF501F9DB8ED001A377F /* NavigationController.swift */; };
+		EA25FF531F9DB93A001A377F /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA25FF521F9DB93A001A377F /* NavigationBar.swift */; };
 		EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D49681F75004500ABEA59 /* AppDelegate.swift */; };
 		EA5D496B1F75005100ABEA59 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49691F75004500ABEA59 /* Info.plist */; };
 		EA5D496C1F75005500ABEA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5D49631F75004500ABEA59 /* LaunchScreen.storyboard */; };
@@ -50,6 +52,8 @@
 		42FC05403DBC28A962C71828 /* Pods_RxSwift_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		497907D4360CE27FDB84383A /* Pods-RxSwift-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-MVVM/Pods-RxSwift-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		8592D4ED7AF7DDB2DA05BDE8 /* Pods-RxSwift-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-MVVM/Pods-RxSwift-MVVM.release.xcconfig"; sourceTree = "<group>"; };
+		EA25FF501F9DB8ED001A377F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		EA25FF521F9DB93A001A377F /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		EA2B80FA1F750012004BCD3E /* RxSwift-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5D49621F75004500ABEA59 /* Images-Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-Assets.xcassets"; sourceTree = "<group>"; };
 		EA5D49641F75004500ABEA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC43C051F9D078200A5D53B /* InstagramTableViewCell.swift */,
+				EA25FF521F9DB93A001A377F /* NavigationBar.swift */,
 				EAC43C061F9D078200A5D53B /* SampleTableViewCell.swift */,
 			);
 			path = View;
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC43C081F9D078200A5D53B /* DataSourceViewController.swift */,
+				EA25FF501F9DB8ED001A377F /* NavigationController.swift */,
 				EAC43C091F9D078200A5D53B /* LoginViewController.swift */,
 				EAC43C0A1F9D078200A5D53B /* NewsFeedViewController.swift */,
 				EAC43C461F9D0C3B00A5D53B /* SettingViewController.swift */,
@@ -412,9 +418,11 @@
 				EAC43C311F9D09E700A5D53B /* LoginViewModel.swift in Sources */,
 				EA5D496A1F75005100ABEA59 /* AppDelegate.swift in Sources */,
 				EAC43C2E1F9D09E100A5D53B /* LoginViewController.swift in Sources */,
+				EA25FF531F9DB93A001A377F /* NavigationBar.swift in Sources */,
 				EAC43C3D1F9D09F500A5D53B /* FCRouterParameters.swift in Sources */,
 				EAC43C3F1F9D09F500A5D53B /* FCRouterRawBody.swift in Sources */,
 				EAC43C3E1F9D09F500A5D53B /* FCRouterPath.swift in Sources */,
+				EA25FF511F9DB8ED001A377F /* NavigationController.swift in Sources */,
 				EAC43C361F9D09ED00A5D53B /* APIRequestProtocolHelper.swift in Sources */,
 				EAC43C351F9D09ED00A5D53B /* APIRequestProtocol.swift in Sources */,
 				EAC43C381F9D09F500A5D53B /* FCRouter.swift in Sources */,
