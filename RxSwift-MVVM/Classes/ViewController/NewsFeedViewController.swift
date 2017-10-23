@@ -22,6 +22,9 @@ class NewsFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "News Feed"
+        
         // Request news feeds
         for userID in InstagramUserManager.shared.getAllUser() {
             viewModel.requestGetNewsFeedService(userID: userID)

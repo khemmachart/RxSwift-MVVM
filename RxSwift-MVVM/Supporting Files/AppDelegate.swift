@@ -14,26 +14,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        setInitialViewController(window: &window)
+        setMainViewController(window: &window)
         return true
     }
 }
 
 extension AppDelegate {
 
-    func setInitialViewController(window: inout UIWindow?) {
-        if let initialViewController = getNewsFeedViewController() {
+    func setMainViewController(window: inout UIWindow?) {
+        if let initialViewController = getInitialViewController() {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = initialViewController
             window?.makeKeyAndVisible()
         }
     }
 
-    private func getNewsFeedViewController() -> NewsFeedViewController? {
+    private func getInitialViewController() -> UIViewController? {
         let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "NewsFeedViewController") as? NewsFeedViewController {
+        if let navController = storyboard.instantiateViewController(withIdentifier: "NavigationController") as? NavigationController,
+            let viewController = navController.viewControllers.first as? NewsFeedViewController {
             viewController.viewModel = NewsFeedViewModel(APIRequest: APIRequest())
-            return viewController
+            return navController
         }
         return nil
     }

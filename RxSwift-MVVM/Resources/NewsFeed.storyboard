@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="NewsFeedViewController" id="v40-5c-etC" customClass="NewsFeedViewController" customModule="RxSwift_MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gww-ox-1DJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vbn-Oz-8hc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="exl-qs-ouP" customClass="InstagramTableViewCell" customModule="RxSwift_MVVM" customModuleProvider="target">
@@ -89,13 +89,33 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rpE-0l-2m5"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="jFB-2y-5KG"/>
                     <connections>
                         <outlet property="tableView" destination="Vbn-Oz-8hc" id="9p7-rf-n0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hy-xk-ndK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="891.90404797601207"/>
+            <point key="canvasLocation" x="479.19999999999999" y="891.90404797601207"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TZd-l9-pRp">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="3YI-F6-j9g" customClass="NavigationController" customModule="RxSwift_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qeD-GB-gF2" customClass="NavigationBar" customModule="RxSwift_MVVM" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v40-5c-etC" kind="relationship" relationship="rootViewController" id="xjc-Qp-zFg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIR-MO-47D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="892"/>
         </scene>
     </scenes>
 </document>
